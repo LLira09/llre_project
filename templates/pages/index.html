@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load humanize %}
 
+{% block title %} | Welcome {% endblock %}
+
 {% block content %}
     <!-- Showcase -->
   <section id="showcase">
@@ -20,12 +22,12 @@
                       <label class="sr-only">Keywords</label>
                       <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
                     </div>
-    
+
                     <div class="col-md-4 mb-3">
                       <label class="sr-only">City</label>
                       <input type="text" name="city" class="form-control" placeholder="City">
                     </div>
-    
+
                     <div class="col-md-4 mb-3">
                       <label class="sr-only">State</label>
                       <select name="state" class="form-control">
@@ -63,7 +65,8 @@
           </div>
         </div>
       </section>
-    
+
+
       <!-- Listings -->
       <section id="listings" class="py-5">
         <div class="container">
@@ -83,7 +86,7 @@
                         <div class="listing-heading text-center">
                           <h4 class="text-primary">{{ listing.title }}</h4>
                           <p>
-                            <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, 
+                            <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }},
                             {{ listing.zipcode }}</p>
                         </div>
                         <hr>
@@ -121,11 +124,11 @@
 
             {% endif %}
 
-    
+
           </div>
         </div>
       </section>
-    
+
       <section id="services" class="py-5 bg-secondary text-white">
         <div class="container">
           <div class="row text-center">
